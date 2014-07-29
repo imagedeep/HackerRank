@@ -1,0 +1,23 @@
+// Filling Jars.cpp
+//Algorithms warmup
+// author - deep
+
+#include<iostream>
+#include<string>
+#include<cmath>
+using namespace std;
+
+int main(){ 
+    int N,M;
+  int a,b;
+    long long k,res=0;
+    cin>>N>>M;
+    
+    while(M--){ 
+        cin>>a>>b>>k;
+        res+=(b-a+1)*(long long)k;
+    }
+   
+    cout<<res/N;
+    return 0; 
+}
