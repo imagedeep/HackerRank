@@ -1,0 +1,34 @@
+//GameOfThrones.cpp
+//Algorithms_warmup
+//Author-  deep
+
+
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main()
+{
+int arr[26]={0};
+int i;
+string s;
+cin >> s;
+int l=s.length();
+for(i=0;i<l;i++){
+	arr[s[i] - 'a']++;
+}
+int sum=0;
+for(i=0;i<26;i++){
+	sum=sum +arr[i]%2;
+}
+
+if(sum>=2)
+cout<< "NO";
+else
+cout<<"YES";
+return 0;
+}
