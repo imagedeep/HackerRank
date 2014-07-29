@@ -1,0 +1,38 @@
+//ChocolateFeast.c
+//Algorithms_warmup
+//Author - deep
+
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+int numberChoc(int n,int c){
+    return n/c;
+}
+int wrapper(int choc,int m){
+    int res=0;
+    while(choc/m >0){
+        res+=choc/m;
+        choc = (choc/m)+(choc%m);
+    }
+    return res;
+}
+
+int main() {
+    
+    int t,n,c,m,i,z;
+    int answer=0;
+    
+    cin>>t;
+    for(i=0;i<t;i++){
+        cin>>n>>c>>m;
+        z=numberChoc(n,c);
+        answer=z+wrapper(z,m);
+        cout<<answer<<endl;
+    }
+    return 0;
+}
+
+
