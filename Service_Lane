@@ -1,0 +1,32 @@
+//Service_Lane.c
+// AlgorithmsWarmup
+//author- deep
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int i,n,j,t,min;
+    scanf("%d%d",&n,&t);
+    int* arr=(int*)malloc(n*sizeof(int));
+    int p,q;
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",arr+i);
+    }
+    min=4;
+    for(i=0;i<t;i++)
+    {
+        scanf("%d%d",&p,&q);
+        min=4;
+        for(j=p;j<=q;j++)
+        {
+            if(arr[j]<min)// 
+                min=arr[j];
+        }
+        printf("%d\n",min);
+    }
+    return 0;
+}
