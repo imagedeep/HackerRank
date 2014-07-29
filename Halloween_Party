@@ -1,0 +1,33 @@
+// HalloweenParty.cpp
+//Algorithms-warmup
+// author-deep
+
+#include <iostream>
+#include <cmath>
+#include <string>
+
+using namespace std;
+
+int main()
+    {
+   int T;
+    unsigned long int K,p,q,res;
+    int i;
+    cin >> T;
+    for(i=0;i<T;i++)
+        {
+        cin >> K;// inserting even odd codition
+        if(K%2 == 0){
+            p= K/2;
+            cout <<p*p<<endl;
+        }
+        else{
+        p = (K/2)+1; 
+        q = K - p; 
+        res = p*q;
+        cout <<res<<endl;
+        }
+    }
+    
+    return 0;
+}
