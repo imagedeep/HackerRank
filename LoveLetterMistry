@@ -1,0 +1,37 @@
+// LoveLetterMistry.cpp
+// Algorithms Warmup
+// author deep
+
+#include <iostream>
+#include <cmath>
+#include <string>
+
+using namespace std;
+
+int check(string str)
+    {
+    int i,j,l,count=0;
+    l=str.length();
+    j=l-1;
+    for(i=0,j;i<j;i++,j--){
+        if(str[i] != str[j]) {
+            count += abs(str[i] - str[j]);
+        }
+    }
+    return count;
+}
+
+int main()
+    {
+    
+    string str;
+    int T,i;
+    cin >> T;
+    for(i=0;i<T;i++)
+        {
+        cin >> str;
+        cout << check(str) <<endl;
+        
+    }
+    return 0;
+}
