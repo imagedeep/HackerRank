@@ -1,0 +1,20 @@
+//gem_stones.py
+//Algorithms_warmup
+//author - deep
+
+num = int(raw_input())
+rokList = []
+for x in xrange(num):
+    rock = raw_input()
+    # list of sets()
+    rokList.append(set(rock))
+gem = 0
+for x in rokList[0]:
+    rocks = len(rokList) - 1
+    count = 0
+    for y in rokList[1:]:
+        if x in y:
+            count += 1
+            if count == rocks:
+                gem += 1
+print gem
